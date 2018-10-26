@@ -1,4 +1,4 @@
-# delish-databricks
+# databricks
 Scala関西2018 向け Databricksサンプルコード
 
 ## databricks 開発環境構築
@@ -24,7 +24,7 @@ Scala関西2018 向け Databricksサンプルコード
 ## notebook example
   - ./notebooks/01-TDSparkExample.html
     - TreasureDataと接続するサンプルコード
-  - ./notebooks/02-MagicNumberAnalyze.html
-    - マジックナンバー分析をするサンプルコード
-  - ./notebooks/03-CollaborativeFiltering.html
+  - ./notebooks/02-CollaborativeFiltering.html
     - 協調フィルタリングをするサンプルコード
+  - ./notebooks/xx-MagicNumberAnalyze.html
+    - マジックナンバー分析をするサンプルコード
