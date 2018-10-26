@@ -1,0 +1,42 @@
+version: 2
+jobs:
+  build:
+    executorType: docker
+    docker:
+      - image: circleci/python:3.6.1
+    steps:
+      - checkout
+
+  deploy:
+    executorType: docker
+    docker:
+      - image: circleci/python:3.6.1
+    steps:
+      - checkout
+      - run:
+          name: install databricks-cli
+          command: |
+            sudo pip install --upgrade pip
+            sudo pip install --upgrade databricks-cli
+
+      - run:
+          name: run boot.sh
+          command: |
+            ./opts/boot.sh
+      - run:
+          name: deploy to databricks
+          command: |
+            databricks workspace import_dir -o ./notebooks /
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
