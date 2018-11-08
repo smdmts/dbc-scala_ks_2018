@@ -22,9 +22,9 @@ Scala関西2018 向け Databricksサンプルコード
    - make dbc_pull_dev
 
 ## notebook example
-  - ./notebooks/01-TDSparkExample.html
-    - TreasureDataと接続するサンプルコード
-  - ./notebooks/02-CollaborativeFiltering.html
+  - ./notebooks/1-SparkExample.html
+    - Sparkによる簡単なサンプルコード
+  - ./notebooks/2-CollaborativeFiltering.html
     - 協調フィルタリングをするサンプルコード
-  - ./notebooks/xx-MagicNumberAnalyze.html
+  - ./notebooks/3-MagicNumberAnalyze.html
     - マジックナンバー分析をするサンプルコード
